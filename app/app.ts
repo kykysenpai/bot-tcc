@@ -1,5 +1,6 @@
 import express from 'express';
 import Discord, {Client} from 'discord.js';
+import CommunistSplitRoutes from "./routes/communist_split/communist_split_routes";
 
 /**
  *  -------------------------------------- EXPRESS ROUTES ----------------------------------
@@ -10,6 +11,8 @@ const server = express();
 server.listen(8080, () => {
     console.info("Express HTTP server is listening on port 8080");
 });
+
+new CommunistSplitRoutes().setupRoute(server);
 
 
 /**
