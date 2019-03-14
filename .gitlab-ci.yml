@@ -1,0 +1,52 @@
+stages:
+ - build
+ - dockerize
+ - deploy
+
+services:
+ - docker:dind
+
+build:
+ image: node
+ stage: build
+ tags:
+  - docker
+ before_script:
+  - rm -rf node-modules
+  - rm -f package-lock.json
+ script:
+  - npm install --verbose
+  - npm run build
+ artifacts:
+  paths:
+   - ./node_modules
+   - ./package-lock.json
+  expire_in: 1 day
+
+dockerize as latest:
+ image: docker
+ stage: dockerize
+ tags:
+  - docker
+ script:
+  - docker build . -t docker.mytcc.be/bot-tcc:latest
+  - docker push docker.mytcc.be/bot-tcc:latest
+
+deploy in development environment:
+ image: ubuntu
+ stage: deploy
+ tags:
+  - docker
+ before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - eval $(ssh-agent -s)
+  - echo "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+ script:
+  - ssh -t kyky@server.mytcc.be "~/deploy_bot_tcc.sh"
+ environment:
+  name: production
+  url: https://bot.tcc.mytcc.be

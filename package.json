@@ -1,0 +1,23 @@
+{
+  "name": "bot-tcc",
+  "version": "0.0.1",
+  "description": "Discord bot for TCC",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab.mytcc.be:9022/TCC/bot-tcc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "discord.js": "^11.4.2",
+    "express": "^4.16.4",
+    "typescript": "^3.3.3333"
+  }
+}
