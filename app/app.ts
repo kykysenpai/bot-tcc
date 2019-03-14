@@ -1,10 +1,30 @@
-const express = require('express');
-const app = express();
+import express from 'express';
+import Discord, {Client} from 'discord.js';
 
-app.get('/', (req: any, res: any) => {
-    res.send('');
+/**
+ *  -------------------------------------- EXPRESS ROUTES ----------------------------------
+ */
+
+const server = express();
+
+server.listen(8080, () => {
+    console.info("Express HTTP server is listening on port 8080");
 });
 
-app.listen(8080, () => {
-    console.info("App is listening on port 8080");
+
+/**
+ * ---------------------------------------- DISCORD BOT ---------------------------------------
+ */
+
+const discord: Client = new Discord.Client();
+
+discord.on('ready', () => {
+   console.info("Discord bot has started");
+});
+
+discord.login('NTU1ODEwODcyMjgzNjI3NTMy.D2wmyA.dhDR0r5Wx_SzCfx_j7MPjIXHFRo')
+    .then((status) => {
+        console.info("Discord bot is logged in");
+    }).catch((err) => {
+        console.error("Discord bot error while logging in :", err);
 });
