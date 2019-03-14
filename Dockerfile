@@ -1,4 +1,4 @@
 FROM node
-COPY ./build /app
+COPY . /app
 WORKDIR /app
-ENTRYPOINT node app.js
+ENTRYPOINT npm run start
