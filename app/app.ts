@@ -48,12 +48,12 @@ discord.on('message', message => {
 });
 discord.on('message', message => {
   if (message.content.toLowerCase() === 'c\'est quoi le plus drole chez les loutres?') {
-    message.channel.send('Elles font caca pour marquer leur territoire');
+    message.channel.send('Elles font caca pour marquer leur territoire :waw:');
   }
 });
 discord.on('message', message => {
-  if (message.content.toLowerCase() === 'quel est le meilleur ami du Yippee?') {
-    message.channel.send('La loutre');
+  if (message.content.toLowerCase() === 'quel est le meilleur ami du yippee?') {
+    message.channel.send('La loutre :wondering:');
   }
 });
 discord.on('message', message => {
@@ -68,6 +68,11 @@ discord.on('message', message => {
 });
 discord.on('message', message => {
   if (message.content.toLowerCase() === 'loutre?') {
-    message.channel.send('Loutre\nQu\'est ce qui est trop bien?\nQuel est le meilleur animal au monde?\nC\'est quoi le plus drole chez les loutres?\nQuel est le meilleur ami du Yippee?\nQuel est le meilleur ami de la loutre?\nTrop bien?');
+    message.channel.send('Loutre\nQu\'est ce qui est trop bien?\nQuel est le meilleur animal au monde?\nC\'est quoi le plus drole chez les loutres?\nQuel est le meilleur ami du Yippee?\nQuel est le meilleur ami de la loutre?\nTrop bien?\nMontre moi une loutre stp');
+  }
+});
+discord.on('message', message => {
+  if (message.content.toLowerCase() === 'montre moi une loutre stp') {
+    message.channel.send(':sad:');
   }
 });
