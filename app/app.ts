@@ -57,7 +57,12 @@ discord.on('message', message => {
   }
 });
 discord.on('message', message => {
-  if (message.content.toLowerCase() === 'Quel est le meilleur ami de la loutre??') {
-    message.channel.send('Le Yippee!);
+  if (message.content.toLowerCase() === 'Quel est le meilleur ami de la loutre?') {
+    message.channel.send('Le Yippee!');
+  }
+});
+discord.on('message', message => {
+  if (message.content.toLowerCase() === 'Trop bien?') {
+    message.channel.send('Loutre!');
   }
 });
