@@ -66,3 +66,8 @@ discord.on('message', message => {
     message.channel.send('Loutre!');
   }
 });
+discord.on('message', message => {
+  if (message.content.toLowerCase() === 'Loutre?') {
+    message.channel.send('Loutre\nQu\'est ce qui est trop bien?\nQuel est le meilleur animal au monde?\nC\'est quoi le plus drole chez les loutres?\nQuel est le meilleur ami du Yippee?\nQuel est le meilleur ami de la loutre?\nTrop bien?');
+  }
+});
