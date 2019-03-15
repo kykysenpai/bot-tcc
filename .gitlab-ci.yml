@@ -51,3 +51,4 @@ deploy in development environment:
  environment:
   name: production
   url: https://bot.tcc.mytcc.be
+ only: master
