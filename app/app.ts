@@ -2,7 +2,7 @@ import express from 'express';
 import Discord, {Client} from 'discord.js';
 import CommunistSplitRoutes from "./routes/communist_split/communist_split_routes";
 import logger from "./logger/logger";
-import BasicCommands from "./discord/basic_commands_router";
+import BasicCommands from "./discord/basic_commands/basic_commands_router";
 
 /**
  *  -------------------------------------- EXPRESS ROUTES ----------------------------------

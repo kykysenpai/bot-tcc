@@ -1,12 +1,12 @@
-import DiscordRouter from "./discord_router";
-import {Client, RichEmbed} from "discord.js";
+import DiscordRouter from "../discord_router";
+import {Client} from "discord.js";
 import basicCommands from "./basic_commands";
 
 export default class BasicCommands implements DiscordRouter {
 
     discord: Client;
 
-    constructor(discord:Client){
+    constructor(discord: Client) {
         this.discord = discord;
     }
 
