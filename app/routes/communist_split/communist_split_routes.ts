@@ -5,7 +5,7 @@ export default class CommunistSplitRoutes implements RouteComponent{
 
     setupRoute(server: Express) {
         server.get("/api/communist-split/post", () => {
-            console.log("new payment");
+            console.info("new payment");
         });
     }
 }
