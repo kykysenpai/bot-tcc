@@ -13,7 +13,7 @@ export default class BasicCommands implements DiscordRouter {
     setup(): void {
         for (let command in basicCommands) {
             this.discord.on('message', message => {
-                if (message.content.toLowerCase().match(command.toLowerCase()) && !message.author.bot) {
+                if (message.content.toLowerCase() === command.toLowerCase() && !message.author.bot) {
                     message.channel.send(basicCommands[command]);
                 }
             })
