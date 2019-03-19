@@ -10,6 +10,14 @@ const basicCommands: Commands = {
     "Quel est le meilleur ami du Yippee?": "La loutre",
     "Quel est le meilleur ami de la loutre?": "Le Yippee!",
     "Trop bien?": "Loutre!",
+    "Oui.": "Non tu arrêtes",
+    "re": "re",
+    "Hein ?": "T'es sourd ?",
+    "merci": "np",
+    "ah": "he",
+    "fdp": "Héla doucement avec les vulgarités !",
+    "Euh": "Réfléchis pas trop hein, c'est pas bon pour le cerveau."
+    
 
 };
 
