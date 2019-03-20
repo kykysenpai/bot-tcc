@@ -16,7 +16,15 @@ const basicCommands: Commands = {
     "merci": "np",
     "ah": "he",
     "fdp": "Héla doucement avec les vulgarités !",
-    "Euh": "Réfléchis pas trop hein, c'est pas bon pour le cerveau."
+    "Euh": "Réfléchis pas trop hein, c'est pas bon pour le cerveau.",
+    "Tg":"toi-même",
+    "mdr": "tellement drôle",
+    "lol": "Bof drôle quand même.",
+    "nan": "Si.",
+    "pd": "Ah, on parle de toi Arnaud ?",
+    "nuit": "Bonne nuit :)",
+    "gn": "Bonne nuit :)",
+    "tin": "C'est pas bien de parler de ta maman comme ça ( ͡° ͜ʖ ͡°)"
     
 
 };
