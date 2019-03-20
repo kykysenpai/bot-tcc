@@ -27,7 +27,7 @@ const basicCommands: Commands = {
     "tin": "C'est pas bien de parler de ta maman comme ça ( ͡° ͜ʖ ͡°)",
     "si": "Nan.",
     "connard": "no u",
-    "hehe": "C'est pas drôle tg."
+    "hehe": "C'est pas drôle tg.",
     "haha": "STFU",
     "pe": "Peut être que t'es pd ouais",
     "slinpy": "... a une grande bouche mdr",
