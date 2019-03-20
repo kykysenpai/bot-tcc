@@ -22,10 +22,24 @@ const basicCommands: Commands = {
     "lol": "Bof drôle quand même.",
     "nan": "Si.",
     "pd": "Ah, on parle de toi Arnaud ?",
-    "nuit": "Bonne nuit :)",
-    "gn": "Bonne nuit :)",
-    "tin": "C'est pas bien de parler de ta maman comme ça ( ͡° ͜ʖ ͡°)"
-    
+    "nuit": "nighty night",
+    "gn": "Bonne nuit, dors mal.",
+    "tin": "C'est pas bien de parler de ta maman comme ça ( ͡° ͜ʖ ͡°)",
+    "si": "Nan.",
+    "connard": "no u",
+    "hehe": "C'est pas drôle tg."
+    "haha": "STFU",
+    "pe": "Peut être que t'es pd ouais",
+    "slinpy": "... a une grande bouche mdr",
+    "nice": "Non moi je trouve que c'est de la merde, et je parle au nom de TCC",
+    "x)": "Hilarant.",
+    "he": "ha",
+    "ho": "hin",
+    "hin": "Arrête c'est pas marrant.",
+    "k": "C'est vrai que ça aurait été tellement long d'écrire le 'O' avant le 'K', j'éspère que le temps gagné sera utilisé à de bonnes choses dans ta vie",
+    "gg": "En vrai c'est pas si ouf que ça",
+    "oui": "stiti. Trop marrant.",
+    "non": "Si."
 
 };
 
