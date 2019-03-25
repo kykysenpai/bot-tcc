@@ -15,6 +15,7 @@ server.listen(8080, () => {
 });
 
 server.post('/api/payment', (req, res) => {
+    console.log(req);
     logger.info(req);
 });
 
