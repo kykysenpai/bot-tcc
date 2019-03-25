@@ -14,6 +14,10 @@ server.listen(8080, () => {
     logger.info("Express HTTP server is listening on port 8080");
 });
 
+server.post('/api/payment', (req, res) => {
+    logger.info(req);
+});
+
 new CommunistSplitRoutes().setupRoute(server);
 
 
