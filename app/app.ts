@@ -10,6 +10,8 @@ import BasicCommands from "./discord/basic_commands/basic_commands_router";
 
 const server = express();
 
+server.use(express.json());
+
 server.listen(8080, () => {
     logger.info("Express HTTP server is listening on port 8080");
 });
