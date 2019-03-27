@@ -38,9 +38,10 @@ server.listen(8080, () => {
 
 server.post('/api/payment', (req, res) => {
     console.log(req.body);
-    console.log("server id : " + req.body.split_payment);
-    console.log(req.body.split_payment.split_group_id_discord_server);
-    let tcc = discord.guilds.get(req.body.split_payment.split_group_id_discord_server);
+    let splitPayment = JSON.parse(req.body.split_payment);
+    console.log(splitPayment);
+    console.log(splitPayment.split_group_id_discord_server);
+    let tcc = discord.guilds.get(splitPayment.split_group_id_discord_server);
     if (tcc != undefined) {
         (<TextChannel>tcc.channels.get("555886032680386581")).send(JSON.stringify(req.body));
     } else {
