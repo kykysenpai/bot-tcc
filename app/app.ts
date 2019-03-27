@@ -40,7 +40,7 @@ server.post('/api/payment', (req, res) => {
     console.log(req.body);
     let tcc = discord.guilds.get(req.body.split_payment.split_group_id_discord_server);
     if (tcc != undefined) {
-        (<TextChannel>tcc.channels.get("555886032680386581")).send(req.body);
+        (<TextChannel>tcc.channels.get("555886032680386581")).send(JSON.stringify(req.body));
     } else {
         logger.error("Guild ID Not existant");
     }
