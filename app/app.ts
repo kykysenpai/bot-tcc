@@ -1,5 +1,5 @@
 import express from 'express';
-import Discord, {Client, TextChannel} from 'discord.js';
+import Discord, {Client, RichEmbed, TextChannel} from 'discord.js';
 import CommunistSplitRoutes from "./routes/communist_split/communist_split_routes";
 import logger from "./logger/logger";
 import BasicCommands from "./discord/basic_commands/basic_commands_router";
@@ -37,13 +37,22 @@ server.listen(8080, () => {
 });
 
 server.post('/api/payment', (req, res) => {
-    console.log(req.body);
     let splitPayment = JSON.parse(req.body.split_payment);
-    console.log(splitPayment);
-    console.log(splitPayment.split_group_id_discord_server);
-    let tcc = discord.guilds.get(splitPayment.split_group_id_discord_server);
-    if (tcc != undefined) {
-        (<TextChannel>tcc.channels.get("555886032680386581")).send(JSON.stringify(req.body));
+    let discord_server = discord.guilds.get(splitPayment.split_group_id_discord_server);
+
+    let embed:RichEmbed = new RichEmbed();
+
+    embed.setTitle(splitPayment.description);
+    embed.setURL("https://scipio.mytcc.be");
+    embed.setAuthor(splitPayment.user_login);
+    embed.setDescription(`A new payment has been created by **${splitPayment.user_login}** in the group **${splitPayment.split_group_name}** for a total of **${splitPayment.total}€**.\nCheck out the details of the money due to him/her for this payment :`);
+    for(let user in splitPayment.participating_users){
+        embed.addField(splitPayment.participating_users[user].login, `${splitPayment.participating_users[user].amount}€`)
+    }
+
+
+    if (discord_server != undefined) {
+        (<TextChannel>discord_server.channels.get(splitPayment.split_group_id_discord_default_channel)).send(embed);
     } else {
         logger.error("Guild ID Not existant");
     }
