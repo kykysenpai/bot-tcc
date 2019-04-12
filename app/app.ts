@@ -45,7 +45,7 @@ server.post('/api/payment', (req, res) => {
     embed.setTitle(splitPayment.description);
     embed.setURL("https://scipio.mytcc.be");
     embed.setAuthor(splitPayment.user_login);
-    embed.setDescription(`A new payment has been created by **${splitPayment.user_login}** in the group **${splitPayment.split_group_name}** for a total of **${splitPayment.total}€**.\nCheck out the details of the money due to him/her for this payment :`);
+    embed.setDescription(`A new payment has been created by **${splitPayment.user_login}** in the group **${splitPayment.split_group_name}** for a total of **${splitPayment.total}€**.\nCheck out the details of the money due to him/her for : **${splitPayment.description}**`);
     for(let user in splitPayment.participating_users){
         embed.addField(splitPayment.participating_users[user].login, `${splitPayment.participating_users[user].amount}€`)
     }
