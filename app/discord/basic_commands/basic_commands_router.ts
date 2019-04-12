@@ -4,10 +4,7 @@ import basicCommands from "./basic_commands";
 
 export default class BasicCommands implements DiscordRouter {
 
-    discord: Client;
-
-    constructor(discord: Client) {
-        this.discord = discord;
+    constructor(private discord: Client) {
     }
 
     setup(): void {
