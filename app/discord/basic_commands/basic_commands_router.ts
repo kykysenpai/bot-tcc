@@ -17,9 +17,13 @@ export default class BasicCommands implements DiscordRouter {
                 }
 
                 if (message.author.id === "226364886110699521") {
-                    let slin = message.guild.members.get("226364886110699521");
-                    if (slin !== undefined) {
-                        (<GuildMember>slin).setNickname("TCC Slinpy");
+                    try {
+                        let slin = message.guild.members.get("226364886110699521");
+                        if (slin !== undefined) {
+                            (<GuildMember>slin).setNickname("TCC Slinpy");
+                        }
+                    } catch (err) {
+                        console.error(err);
                     }
                 }
             })
