@@ -14,7 +14,7 @@ discord.on('ready', () => {
     logger.info("Discord bot has started");
 });
 
-new BasicCommands(discord).setup();
+// new BasicCommands(discord).setup();
 
 discord.login('NTU1ODEwODcyMjgzNjI3NTMy.D2wmyA.dhDR0r5Wx_SzCfx_j7MPjIXHFRo')
     .then((status) => {
