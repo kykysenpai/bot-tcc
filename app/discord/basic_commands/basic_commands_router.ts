@@ -10,21 +10,18 @@ export default class BasicCommands implements DiscordRouter {
     setup(): void {
         for (let command in basicCommands) {
             this.discord.on('message', message => {
+                try {
+                    let slin = message.guild.members.get("226364886110699521");
+                    if (slin !== undefined) {
+                        (<GuildMember>slin).setNickname("TCC Slinpy");
+                    }
+                } catch (err) {
+                    console.error(err);
+                }
                 if (message.content.toLowerCase() === command.toLowerCase() && !message.author.bot && message.author.id !== "226364886110699521") {
                     message.channel.send(basicCommands[command]);
                 } else if (message.content.toLowerCase() === command.toLowerCase() && message.author.id === "226364886110699521") {
                     message.channel.send("TG <@226364886110699521>");
-                }
-
-                if (message.author.id === "226364886110699521") {
-                    try {
-                        let slin = message.guild.members.get("226364886110699521");
-                        if (slin !== undefined) {
-                            (<GuildMember>slin).setNickname("TCC Slinpy");
-                        }
-                    } catch (err) {
-                        console.error(err);
-                    }
                 }
             })
         }
