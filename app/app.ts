@@ -16,7 +16,7 @@ discord.on('ready', () => {
 
 // new BasicCommands(discord).setup();
 
-discord.login('NTU1ODEwODcyMjgzNjI3NTMy.D2wmyA.dhDR0r5Wx_SzCfx_j7MPjIXHFRo')
+discord.login('NTU1ODEwODcyMjgzNjI3NTMy.XY9fgg.ml_XI0hI7Plb3GLYz1h94sP6oUo')
     .then((status) => {
         logger.info("Discord bot is logged in");
     })
