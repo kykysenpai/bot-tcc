@@ -30,8 +30,8 @@ dockerize as latest:
  tags:
   - docker
  script:
-  - docker build . -t registry/bot-tcc:latest
-  - docker push registry/bot-tcc:latest
+  - docker build . -t localhost:5005/bot-tcc:latest
+  - docker push localhost:5005/bot-tcc:latest
  only:
   - master
 
